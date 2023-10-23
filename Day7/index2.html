@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(Create and Remove Element</title>
+</head>
+<body>
+    <ul>
+        <li>Hello</li>
+        <li>Hii</li>
+        <li>Namaste</li>
+    </ul>
+
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, facere!</h2>
+    
+
+    <script>
+        // CreateElement
+        let createElement = document.createElement('h1');  // We can create element by using createEleement method
+        createElement.textContent = 'DOM (Create Element h1 by using dom)';
+        createElement.style.fontSize = '30px';
+        createElement.style.color = 'red';
+        console.log(createElement);
+        document.body.appendChild(createElement); // After that we can add element in body by using apend child method
+
+        let createPara = document.createElement('p');
+        createPara.textContent = 'This a paragraph tag created by dom maniplation';
+        createPara.style.fontFamily = 'italic';
+        createPara.style.backgroundColor = 'purple';
+        createPara.style.color = 'white';
+        createPara.style.fontSize = '20px' ;
+        createPara.style.textAlign = 'center';
+        document.body.appendChild(createPara);
+        
+        // Remove Element
+        let ul = document.querySelector('ul');
+        console.log(ul);
+
+        let lists = document.querySelectorAll('li');
+        console.log(lists);
+        for (list of lists){
+            ul.removeChild(list);    // We can remove exiting element by using removeChild method
+        }
+
+        let removechild = document.querySelector('h2');
+        removechild.remove();
+
+    </script>
+</body>
+</html>

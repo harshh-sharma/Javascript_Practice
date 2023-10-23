@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;color: aquamarine;">
+   
+    
+  
+</body>
+<script>
+    const div = document.createElement('div');
+    console.log(div);
+    div.setAttribute('id','parent');
+    div.setAttribute('class','container');
+    div.style.backgroundColor = 'green';
+    div.style.width = '200px';
+    div.style.height = '200px';
+    div.style.display = 'flex';
+    div.style.alignItems = 'Centre';
+    div.style.justifyContent = 'Centre';
+    div.style.textAlign = 'centre';
+    div.style.borderRadius = '50%'
+    div.innerText = 'Chai or Javascript';
+    document.body.appendChild(div);
+     
+    const h1 = document.createElement('h1');
+    h1.innerText = 'Dom | Document object model';
+    h1.textAlign = 'Centre';
+    document.body.appendChild(h1);
+
+    const para = document.createElement('p');
+    para.innerText = " Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, soluta!";
+    para.style.fontSize = '20px';
+    document.body.appendChild(para);
+    para.style.color = 'white';
+</script>
+</html>

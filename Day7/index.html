@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <h1 id="dom">Dom</h1>
+    <ul>
+        <li class="list">first</li>
+        <li class="list">second</li>
+        <li class="list">third</li>
+    </ul>
+    <h3 class="h3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, ea.</h3>
+    <h1>Query Selector</h1>
+    <h2 class="hello">Set Attribute</h2>
+
+
+
+    <script>
+        // By id
+        let var1  = document.getElementById('dom');
+        console.log(var1);
+        var1.innerText = "Document object model" ;
+
+        // By class
+        let var2 = document.getElementsByClassName('list');
+        console.log(var2);
+        var2[0].innerText = 'Hello';
+        var2[1].innerText = 'Namaste';
+        var2[2].innerText = 'Hii';
+
+        // By tagName
+        let var3 = document.getElementsByTagName("h3");
+        console.log(var3);
+        var3.innerText = 'Hello there It is a paragraph tag';
+
+        // Query selector
+        let ids = document.querySelector('#dom');
+        console.log(ids);
+        ids.innerHTML = 'Document Object Model (DOM)';
+
+        let var4 = document.querySelector('.hello');
+        console.log(var4);
+        var4.className = 'Hii';   // We can change the previous class name by property className
+        var4.setAttribute('id','hello');  // We can set new attribute to the element by using setAttribute method 
+        var4.classList = "list hii";    //We can give multiple classes by using property classList 
+      
+
+    </script>
+</body>
+</html>

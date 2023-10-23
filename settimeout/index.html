@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;  color: wheat;">
+    <h1>Hello chai or code !!</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const sayHello = () => {
+        document.querySelector('h1').innerHTML = 'Best JS Series';
+    }
+    
+    const changeMe = setTimeout(sayHello,2000);
+
+    const stopMe = () => {
+        clearTimeout(changeMe);
+        console.log('stopped');
+    }
+
+    document.getElementById('stop').addEventListener('click',stopMe);
+
+</script>
+</html>

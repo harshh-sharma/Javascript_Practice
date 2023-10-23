@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: wheat;
+        }
+    </style>
+</head>
+<body id="bg">
+    <!-- <div>
+        <h1 id="heading">DOM Learning By Hitesh Chaudary</h1>
+        <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, hic.</p>
+    </div>
+    <ul>
+        <li>first</li>
+        <li>second</li>
+        <li>Third</li>
+    </ul> -->
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thrusday</div>
+    </div>
+
+    <script>
+        const parent = document.querySelector('.parent');
+        console.log(parent);
+        console.log(parent.children);
+        console.log(parent.children[0]);
+
+        for(i = 0 ; i < parent.children.length ; i++){
+            console.log(parent.children[i].innerHTML);
+        }
+        parent.children[1].style.backgroundColor = 'green';
+        parent.children[1].style.padding = '20px 10px';
+        parent.children[1].style.fontSize = '20px';
+        parent.children[1].style.fontWeight = '600';
+    </script>
+</body>
+</html>

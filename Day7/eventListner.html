@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom (EventListner)</title>
+</head>
+<body>
+    <h1>Click Anywhere on the screen to see the message</h1>
+    <p id = 'click'></p>
+    <button onclick="changeButtonText()" id="btn">Submit</button>
+    <script>
+        let click = document.getElementById('click');
+        console.log(click);
+        let btn = document.getElementsByTagName('button');
+        console.log(btn);
+        document.addEventListener('click',text);
+
+
+        function text(){
+            click.innerText = 'Welcome to the World of Javascript';
+            click.style.textAlign = 'centre' ;
+            click.style.fontSize = '20px ';
+            click.style.color = 'blue';
+        }
+
+
+        function changeButtonText(){
+               let button = document.getElementById('btn');
+               button.innerText = 'Success';
+               button.style.fontSize = '20px';
+               button.style.color = 'black';
+               button.style.backgroundColor = 'lightblue';
+               button.style.padding = '20px ';
+               button.style.borderRadius = '2px solid black';
+        }
+    </script>
+</body>
+</html>
